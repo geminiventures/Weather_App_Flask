@@ -1,0 +1,24 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: Information for application to create a web page
+- text: A scheme that serves as the basis for all web pages of the application
+- text: A special object that responds only to certain request types (POST or GET).
+- text: An HTML document with the content of a web page that our application can send
+    to users at any moment
+files:
+- name: main.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/17703#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Sat, 10 Sep 2022 11:14:23 UTC
+record: -1
+selected_options:
+- 3
+local_check: false

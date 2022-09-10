@@ -1,0 +1,23 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: A templating language that is used in Flask for template creation
+- text: A name of a developer that created the Flask templating language
+- text: A module that allows us to create templates with the .jnj extension
+- text: A programming language that Flask uses to create templates.
+files:
+- name: main.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/17706#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Sat, 10 Sep 2022 11:14:59 UTC
+record: -1
+selected_options:
+- 0
+local_check: false

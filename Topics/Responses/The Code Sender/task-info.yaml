@@ -1,0 +1,22 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    from flask import Flask, jsonify
+
+    app = Flask('main')
+    app.app_context()
+
+    @app.route('/<data>')
+    def response_maker(data):
+        text, status_code = data.split(';')
+
+        # your code here
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/17396#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Sat, 10 Sep 2022 10:15:20 UTC
+record: -1

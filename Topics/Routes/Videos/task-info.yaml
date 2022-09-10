@@ -1,0 +1,20 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    from flask import Flask
+
+    app = Flask('main')
+    app.app_context()
+
+    @app.route()
+    def render_videos():
+        pass  # your code here
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/17355#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Sat, 10 Sep 2022 09:11:08 UTC
+record: -1

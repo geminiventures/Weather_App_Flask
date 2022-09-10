@@ -1,0 +1,22 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    from flask import Flask, render_template
+
+    app = Flask('main')
+    app.app_context()
+
+    @app.route()
+    # your code here
+
+    @app.route()
+    # your code here
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/17353#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Sat, 10 Sep 2022 09:04:35 UTC
+record: -1

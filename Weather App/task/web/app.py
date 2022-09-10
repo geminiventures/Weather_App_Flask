@@ -1,19 +1,19 @@
 from flask import Flask, render_template, request
-import sys # for __name__ == "__main__"
-import requests # pip install requests for working with external APIs
-import math # for converting kelvin to celsius math.floor()
-import time # work with Epoch time
-from os import getenv # pip install python-dotenv to load environment variables from .env file
-from dotenv import load_dotenv # pip install python-dotenv to hide API key
+import sys  # for __name__ == "__main__"
+import requests  # pip install requests for working with external APIs
+import math  # for converting kelvin to celsius math.floor()
+import time  # work with Epoch time
+from os import getenv  # pip install python-dotenv to load environment variables from .env file
+from dotenv import load_dotenv  # pip install python-dotenv to hide API key
 
-load_dotenv() # load the API key from the .env file
+load_dotenv()  # load the API key from the .env file
 
-
-WEATHER_API_KEY = getenv("WEATHER_API_KEY") # get the API key from environment variables
+WEATHER_API_KEY = getenv("WEATHER_API_KEY")  # get the API key from environment variables
 
 
 def convert_to_celcius(kelvin_value: float) -> float:
     return math.floor(kelvin_value - 273.15)
+
 
 # figure out if it is day or night
 def time_of_day(weather_object):
@@ -22,9 +22,8 @@ def time_of_day(weather_object):
     sunset = int(time.localtime(int(weather_object["sys"]["sunset"]))[3])
     if current_time >= sunrise and current_time < sunset:
         return "card day"
-    elif current_time > sunset and current_time < sunrise:
+    elif current_time >= sunset and current_time < sunrise:
         return "card night"
-
 
 
 app = Flask(__name__)
@@ -33,6 +32,7 @@ app = Flask(__name__)
 @app.route('/', methods=['GET'])
 def index():
     return render_template('index.html')
+
 
 @app.route('/add', methods=['POST'])
 def get_weather():

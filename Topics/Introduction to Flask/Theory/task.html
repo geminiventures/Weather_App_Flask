@@ -1,0 +1,70 @@
+<h2>Introduction to Flask</h2>
+<p>Flask is a <strong>micro-framework </strong>that can build awesome <strong>web applications</strong>. It was created in 2010 by Armin Ronacher, an Australian programmer. This framework is open-source, so anyone can get the code and change it. </p>
+
+<p style="text-align: center;"><img alt="" height="168" src="https://ucarecdn.com/39c4a079-69cd-446d-8233-eed44240ccae/" width="429"></p>
+
+<p> </p>
+
+<p>Flask has undergone many changes during development; countless bugs have been fixed. GitHub reports that about 3000 changes have been made over the years. This colossal work has paved the way to fame, and Flask is now one of the most sought-after libraries for web application development.</p>
+
+<h5 id="purpose">Purpose</h5>
+
+<p>Flask is good when you want to create web applications that have <strong>no dynamic web pages</strong>. The easiest task for Flask, which can be completed in 10-15 minutes, is a one-page business card site that presents a company or a person. Sounds great, doesn't it?</p>
+
+<p>Of course, not everything is that easy. You will need to take care of the outer look — make some pages using HTML, CSS, and JavaScript. This is usually done by <strong>front-end </strong>developers, as opposed to <strong>back-end</strong> programmers who use, for example, Flask to write website server part and web applications. Some may do both at once (back and front-end), they are called <strong>full-stack</strong> developers.</p>
+
+<h5 id="other-frameworks">Other frameworks</h5>
+
+<p>Everywhere in life, you find tasks that may have more than one solution; web development is no exception. In addition to Flask, there are other web frameworks, Django being the most popular. This is a large module that overlaps Flask in some ways. It offers everything at once, while Flask allows programmers to configure everything as it is convenient for them. For example, Django immediately connects the admin panel, registration service, databases, and a lot of other things. In Flask, you need to do this manually. It may seem inconvenient at first glance, but it is actually useful as it allows us to work only with the modules that we actually need.</p>
+
+<p>Django is useful when you need to create websites with complex animation that can adapt to particular user's needs. It would be an overstatement to say that Flask is inferior to Django — it may require more effort, but, in the end, you'll get a product that is more suitable for your needs. </p>
+
+<p>For more info on difference between Flask and Django, you can read an awesome <a target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" href="https://www.imaginarycloud.com/blog/flask-vs-django" rel="noopener noreferrer nofollow">article</a>.</p>
+
+<h5 id="preparations">Preparations</h5>
+
+<p>Now, when we understand the most common purpose of Flask use, let's move on to practice. We'll begin with creating a virtual environment -- one of the most important steps when building a new application.</p>
+
+<p>After virtual environment is created and activated,  we can install Flask using pip: </p>
+
+<pre><code class="language-python"># Unix
+python -m venv env
+source env/bin/activate
+pip install flask
+
+# Windows
+python -m venv env
+env\Scripts\activate
+pip install flask</code></pre>
+
+<p>Now, we are ready to move mountains (and browser tabs).</p>
+
+<h5 id="create-your-app">Create your app</h5>
+
+<p>It's time for us to write our first web app! It will take about 5 minutes, but I'm sure we can handle it. First, we need to import the main class of our framework:</p>
+
+<pre><code class="language-python">from flask import Flask</code></pre>
+
+<p>Now let's create a variable that will initialize the application. The first (and the only required) parameter is used to resolve the directory where the Flask application is installed (so that Flask knows where to look up for resources, templates, static files etc). Sometimes you will see using the <code class="language-python">__name__</code> variable (which is basically equal to the module's the program runs in name) there, but in most cases it is recommended to hardcode the name of the application's package there. So we'll go with <code class="language-python">super-app</code>:</p>
+
+<pre><code class="language-python">app = Flask('super-app')</code></pre>
+
+<p>We're halfway there, don't give up! Let's tell our app what to do if a user accesses a specific URL:</p>
+
+<pre><code class="language-python">@app.route('/')
+def index():
+   return 'Hello World!'</code></pre>
+
+<p>With the <code class="language-python">@app.route</code> decorator, we're telling the program that the next function will be bound to a specific URL in the parentheses (<code class="language-python">'/'</code> in our case). The function will show the following string: <code class="language-python">"Hello World!"</code>. Note that the function can have any name. What is important is that it follows the decorator.</p>
+
+<p>Finally, let's launch our creation:</p>
+
+<pre><code class="language-python">app.run()</code></pre>
+
+<p>Perfect! If everything is done correctly, the console will display several messages, the last of which will contain the address (the default is <code class="language-python">127.0.0.1:5000</code>) where the app is accessible. Enter this address in the browser and discover <code class="language-python">Hello World!</code></p>
+
+<p style="text-align: center;"><img alt="" src="https://ucarecdn.com/874d32ff-3070-458d-bb50-2b3362816b61/"></p>
+
+<h5 id="conclusions">Conclusions</h5>
+
+<p>We have started a series of topics that can help us master Flask. In this topic, we have covered some pros and cons of the framework: Flask is flexible, each module has to be connected individually. But it also means that you need to know about those modules beforehand, so Flask is not a ready-made solution. We have also created a virtual environment and compiled a small web application that displays certain messages to the person who uses it. It is beautiful, isn't it? If you are interested in more on Flask, take a look at the <a target="_blank" target="_blank" target="_blank" target="_blank" target="_blank" href="https://flask.palletsprojects.com/en/1.1.x/" rel="noopener noreferrer nofollow">Official Flask Documentation</a>. And good luck!</p>

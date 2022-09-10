@@ -1,0 +1,20 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    from flask import Flask
+
+    app = Flask('main')
+
+    @app.route()
+    def render_about():
+        pass  # your code here
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/17352#comment
+status: Failed
+feedback:
+  message: |
+    Failed. Time limit exceeded
+  time: Sat, 10 Sep 2022 08:57:42 UTC
+record: -1
